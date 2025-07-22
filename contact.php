@@ -3,9 +3,9 @@
 
 // Database connection settings
 $server   = "localhost";
-$username = "u917690034_aws";
-$password = "2aBq!7#OxB!";
-$dbname   = "u917690034_aws";
+$username = "root";
+$password = "";
+$dbname   = "your database nanme";
 
 // Connect to MySQL
 $con = mysqli_connect($server, $username, $password, $dbname);
