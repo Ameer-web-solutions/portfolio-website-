@@ -1,36 +1,3 @@
-<!-- php code here -->
-<!-- // Database connection settings
-$server   = "localhost";
-$username = "root";
-$password = "";
-$dbname   = "portfolio";
-
-// Connect to MySQL
-$con = mysqli_connect($server, $username, $password, $dbname);
-
-// Check connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Check if form is submitted
-if (isset($_POST['submit'])) {
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
-    
-
-    // Correct SQL for your table
-        $query = "INSERT INTO `contactform`(`name`, `email`, `phone`, `message`) VALUES ('$name','$email','$phone','$message')";
-        $run = mysqli_query($con, $query);
-        
-        echo "<script>
-        alert('thank you! we will get back soon')
-        </script>";
-} -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,473 +6,398 @@ if (isset($_POST['submit'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Ameer Hamza" />
-  <meta name="keywords" content="Web Development, Full-Stack Developer, SEO Services, Custom Websites, Ameer Hamza" />
+  <meta name="keywords" content="Website Development, Full-Stack Developer, SEO Services, WordPress Websites" />
 
   <!-- SEO Title and Description -->
-  <title>Portfolio website</title>
-  <meta name="description" content="" />
+  <title>Ameer Web Solutions</title>
+  <meta name="description" content="We craft high-performing websites and SEO strategies for businesses that want to grow online. From custom design to speed optimization, we build success" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="" />
+  <link rel="canonical" href="https://www.ameerwebsolutions.com/" />
 
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:title" content="" />
-  <meta property="og:description" content="" />
-  <meta property="og:image" content="" />
+  <meta property="og:url" content="https://www.ameerwebsolutions.com/" />
+  <meta property="og:title" content="Ameer Web Solutions | Launch Your Website the Right Way" />
+  <meta property="og:description" content="Need a website that performs and ranks? I help businesses with full-stack development, SEO, and digital strategy." />
+  <meta property="og:image" content="https://www.ameerwebsolutions.com/images/author-picture.webp" />
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="" />
+  <meta name="twitter:title" content="Ameer Web Solutions | Launch Your Website the Right Way" />
+  <meta name="twitter:description" content="Need a website that performs and ranks? I help businesses with full-stack development, SEO, and digital strategy." />
+  <meta name="twitter:image" content="https://www.ameerwebsolutions.com/images/logo.png" />
 
   <!-- Structured Data: JSON-LD Schema Markup -->
-  
-          <!-- Your Schema markeup  -->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Ameer Web Solutions",
+  "url": "https://ameerwebsolutions.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ameerwebsolutions.com/?s={search_term_string}{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pAP0bD0I2yL2P9+ex..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Core Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .image{
+        background: url('images/laptop-with-glowing-screen-table.webp');
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+        backdrop-filter: blur(10px);          /* BLUR EFFECT */
+        -webkit-backdrop-filter: blur(10px);  /* Safari support */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* optional for glass look */
+        color: white;
+        }
+        .hero-gradient {
+          background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0fdf4 100%);
+        }
+        .process-step {
+          position: relative;
+          padding-left: 80px;
+          margin-bottom: 40px;
+        }
+    
+    .process-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .cta-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    </style>
 </head>
-
-
 <body class="bg-gray-50">
-
   <!-- Navigation -->
   <?php
   require('header.php')
   ?>
 
   <!-- Hero Section -->
-  <section id="home" class="hero-gradient pt-32 pb-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="lg:flex lg:items-center lg:justify-between">
-            <div class="lg:w-1/2 mb-12 lg:mb-0">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-                    Hi, I'm <span class="gradient-text">Ameer Hamza</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">
-                    Full-Stack Developer & SEO Specialist
-                </h2>
-                <p class="text-lg text-gray-600 mb-8">
-                    I craft high-performance digital experiences designed to boost visibility, engage users, and drive real business growth. With over 3 years of hands-on experience as a web developer and SEO specialist, I turn ideas into scalable, secure, and conversion-focused web solutions that not only look great but perform even better.
-                <div class="flex space-x-4">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                        Get Started
-                    </a>
-                    <a href="#projects" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300">
-                        View Portfolio
-                    </a>
-                </div>
-                
-                <div class="flex items-center mt-8 space-x-6">
-                    <div class="flex items-center">
-                        <div class="flex -space-x-2">
-                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Client 1">
-                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2">
-                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client 3">
+  <section id="home" class="image pt-32 overflow-hidden min-h-screen flex pb-20">
+
+        <!-- Animated Background Shapes -->
+        <div class="absolute inset-0 z-1 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-white space-y-4 animate__animated animate__fadeInLeft">
+                    <div class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-light-500/20 border border-white/10 mb-4">
+                        <span class="text-sm font-medium white">🚀 Welcome to the Future of Web Development</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl xl:text-7xl font-bold leading-tight hero-gradient-text animate__animated animate__fadeInUp animate__delay-1s">
+                        Transform Your <br/>
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-600">Digital Presence</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-white  max-w-2xl ">
+                        Expert web development solutions tailored to your business needs. We create stunning, high-performance websites that drive results and enhance your online success.
+                    </p>
+                    <ul class="grid grid-cols-2 gap-6 py-4 animate__animated animate__fadeInUp animate__delay-2s">
+                        <li class="flex items-center transform hover:scale-105 transition-transform cursor-pointer space-x-3 group">
+                            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/40 transition-all duration-300">
+                                <i class="fas fa-check text-blue-400"></i>
+                            </span>
+                            <span class="font-medium">Custom Web Development</span>
+                        </li>
+                        <li class="flex items-center transform hover:scale-105 transition-transform cursor-pointer space-x-3 group">
+                            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/40 transition-all duration-300">
+                                <i class="fas fa-mobile-alt text-green-400"></i>
+                            </span>
+                            <span class="font-medium">Responsive Design</span>
+                        </li>
+                        <li class="flex items-center transform hover:scale-105 transition-transform cursor-pointer space-x-3 group">
+                            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/40 transition-all duration-300">
+                                <i class="fas fa-shopping-cart text-blue-500"></i>
+                            </span>
+                            <span class="font-medium">E-commerce Solutions</span>
+                        </li>
+                        <li class="flex items-center transform hover:scale-105 transition-transform cursor-pointer space-x-3 group">
+                            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/40 transition-all duration-300">
+                                <i class="fas fa-search text-green-500"></i>
+                            </span>
+                            <span class="font-medium">SEO Optimization</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-6 pt-4 animate__animated animate__fadeInUp animate__delay-3s">
+                        <div class="text-center transform hover:scale-105 transition-transform cursor-pointer group">
+                            <h4 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-600">3+years</h4>
+                            <p class="text-sm text-white">Experience</p>
                         </div>
-                        <div class="ml-4">
-                            <p class="text-sm text-gray-600">Trusted by <span class="font-bold">50+</span> clients</p>
+                        <div class="text-center transform hover:scale-105 transition-transform cursor-pointer group">
+                            <h4 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-600">20+</h4>
+                            <p class="text-sm text-white">Projects Completed</p>
+                        </div>
+                        <div class="text-center transform hover:scale-105 transition-transform cursor-pointer group">
+                            <h4 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-600">24/7</h4>
+                            <p class="text-sm text-white">Support</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="lg:w-1/2 flex justify-center">
-                <div class="relative">
-                    <img src="images/author-picture.webp" alt="Ameer Hamza" class="rounded-lg shadow-xl w-full max-w-md h-auto">
-                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
-                        <div class="flex items-center">
-                            <div class="bg-blue-100 p-3 rounded-full mr-3">
-                                <i class="fas fa-medal text-blue-600 text-xl"></i>
+
+                <!-- Right Content - Floating Cards -->
+                <div class="hidden lg:block relative animate__animated animate__fadeInRight">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/30 to-green-500/30 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+                    <div class="relative z-10 grid grid-cols-2 gap-6">
+                        <!-- Service Cards -->
+                        <div class="glass-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300  border border-white group cursor-pointer">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-400/30 to-green-500/30 mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-laptop text-4xl text-green-400 group-hover:text-green-300 transition-colors"></i>
                             </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Experience</p>
-                                <p class="font-bold text-gray-800">3+ Years</p>
-                            </div>
+                            <h2 class="text-2xl font-semibold text-white mb-3">Web Development</h2>
+                            <p class="text-white text-medium">websites that represent your brand perfectly.</p>
                         </div>
-                    </div>
-                    <div class="absolute -top-5 -left-5 bg-white p-4 rounded-lg shadow-lg">
-                        <div class="flex items-center">
-                            <div class="bg-green-100 p-3 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-green-600 text-xl"></i>
+                        <div class="glass-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300 border border-white/10 mt-12 group cursor-pointer">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-400/30 to-green-500/30 mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-mobile-alt text-4xl text-green-400 group-hover:text-green-300 transition-colors"></i>
                             </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Projects</p>
-                                <p class="font-bold text-gray-800">20+</p>
-                            </div>
+                            <h2 class="text-2xl font-semibold text-white mb-3">Responsive Design</h2>
+                            <p class="text-white text-medium">Fully responsive design that looks perfect on all devices</p>
                         </div>
-                    </div>
-                    <!-- Author Image -->
-                    <div class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
-                        <img src="images/author-picture.webp" alt="Author" class="w-24 h-24 rounded-full border-4 border-white shadow-lg">
+                        <div class="glass-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300  border border-white/10 group cursor-pointer">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-400/30 to-green-500/30 mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-rocket text-4xl text-blue-400 group-hover:text-blue-300 transition-colors"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-white mb-3">Performance</h2>
+                            <p class="text-white text-medium">Optimized for high performance with fast loading speeds</p>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300  border border-white/10 mt-12 group cursor-pointer">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-400/30 to-green-500/30 mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-search text-4xl text-green-400 group-hover:text-yello-600 transition-colors"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-white mb-3">SEO Optimized</h2>
+                            <p class="text-white text-medium">drive more organic traffic with white-hat SEO strategies</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">My journey in web development and digital solutions</p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
-      </div>
-      
-      <div class="lg:flex lg:items-center lg:space-x-12">
-        <div class="lg:w-1/2 mb-12 lg:mb-0">
-          <div class="bg-gray-100 p-8 rounded-xl">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Professional Journey</h3>
-            <p class="text-gray-600 mb-6">
-              I'm Ameer Hamza, a dedicated full-stack web developer and digital solutions architect. 
-            </p>
-            <p class="text-gray-600 mb-6">
-              My journey started at ATS Software House, where I built a solid foundation in web development and advanced WordPress customization. Since then, I’ve spent the last 2 years helping businesses of all sizes strengthen their digital presence through tailored websites, e-commerce platforms, and strategic digital solutions.
-            </p>
-            <p class="text-gray-600 mb-6">
-              Whether you're a startup, entrepreneur, or established business, I bring the technical skills and creative thinking needed to turn your ideas into reliable, scalable, and high-performing online experiences.
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                  <span class="text-gray-700">Responsive Design</span>
-                </div>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                  <span class="text-gray-700">SEO Optimized</span>
-                </div>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                  <span class="text-gray-700">Fast Performance</span>
-                </div>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                  <span class="text-gray-700">Secure Code</span>
-                </div>
-              </div>
+<!-- Services Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-blue-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center my-20">
+                <h2 class="text-4xl font-bold text-white mb-4">Our Services</h2>
+                <p class="text-xl text-gray-300">Comprehensive web solutions for your business</p>
             </div>
-          </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 group">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Custom Development</h3>
+                    <p class="text-gray-300 mb-6">Tailored web solutions that perfectly match your business requirements and goals.</p>
+                    <ul class="space-y-2 text-white">
+                      <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        Fully responsive across all devices
+                      </li>
+                      <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        Clean, SEO-friendly code structure
+                      </li>
+                      <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        Optimized for speed
+                      </li>
+                    </ul>
+                    <a href="service.php" class="inline-flex mt-5 items-center text-blue-400 hover:text-blue-300 transition-colors">
+                        Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            
+            <!-- Service Card 2 -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 group">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-300 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fab fa-wordpress text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white mb-4">WordPress Development</h3>
+                <p class="text-gray-300 mb-6">Custom WordPress solutions ranging from simple blogs to dynamic business sites.</p>
+                <ul class="space-y-2 text-white">
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Advanced theme customization
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Plugin configurations
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    WooCommerce integrations
+                  </li>
+                </ul>
+                <a href="service.php" class="inline-flex mt-5 items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 group">
+                <div class="bg-gradient-to-br from-pink-500 to-red-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-shopping-cart text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white mb-4">E-commerce Solutions</h3>
+                <p class="text-gray-300 mb-6">Powerful online stores with seamless shopping experiences.</p>
+                <ul class="space-y-2 text-white">
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    WooCommerce setup
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Product management
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Conversion optimization
+                  </li>
+                </ul>
+                <a href="service.php" class="inline-flex mt-5 items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 group">
+                <div class="bg-gradient-to-br from-green-500 to-blue-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-search text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white mb-4">Search Engine Optimization</h3>
+                <p class="text-gray-300 mb-6">Result-driven SEO strategies to boost your site’s visibility, and organic traffic.</p>
+                <ul class="space-y-2 text-white">
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Keyword research and content planning
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    On-page SEO enhancements
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Strategic link building
+                  </li>
+                </ul>
+                <a href="service.php" class="inline-flex mt-5 items-center text-green-400 hover:text-green-300 transition-colors">
+                    Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 group">
+                <div class="bg-gradient-to-br from-blue-500 to-indigo-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-laptop text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white mb-4">Web Application Development</h3>
+                <p class="text-gray-300 mb-6">Build powerful, scalable, and user-friendly web applications tailored to your business goals.</p>
+                <ul class="space-y-2 text-white">
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Custom Web App Solutions
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Responsive & Modern UI/UX
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Secure & Scalable Architecture
+                  </li>
+                </ul>
+                <a href="service.php" class="inline-flex mt-5 items-center text-green-400 hover:text-green-300 transition-colors">
+                    Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
         </div>
-        
-        <div class="lg:w-1/2">
-          <h3 class="text-2xl font-bold text-gray-800 mb-6">My Skills</h3>
-          
-          <div class="mb-6">
-            <div class="flex justify-between mb-2">
-              <span class="text-gray-700 font-medium">HTML/CSS/JavaScript</span>
-              <span class="text-gray-500">95%</span>
-            </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
-            </div>
-          </div>
-          
-          <div class="mb-6">
-            <div class="flex justify-between mb-2">
-              <span class="text-gray-700 font-medium">WordPress</span>
-              <span class="text-gray-500">90%</span>
-            </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
-            </div>
-          </div>
-          
-          <div class="mb-6">
-            <div class="flex justify-between mb-2">
-              <span class="text-gray-700 font-medium">PHP/MySQL</span>
-              <span class="text-gray-500">85%</span>
-            </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
-            </div>
-          </div>
-          
-          <div class="mb-6">
-            <div class="flex justify-between mb-2">
-              <span class="text-gray-700 font-medium">SEO Optimization</span>
-              <span class="text-gray-500">92%</span>
-            </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
-            </div>
-          </div>
-          
-          <div class="flex space-x-4 mt-8">
-            <div class="bg-blue-100 p-4 rounded-lg text-center flex-1">
-              <i class="fas fa-project-diagram text-blue-600 text-2xl mb-2"></i>
-              <p class="font-bold text-gray-800">20+</p>
-              <p class="text-sm text-gray-600">Projects</p>
-            </div>
-            <div class="bg-green-100 p-4 rounded-lg text-center flex-1">
-              <i class="fas fa-users text-green-600 text-2xl mb-2"></i>
-              <p class="font-bold text-gray-800">20+</p>
-              <p class="text-sm text-gray-600">Clients</p>
-            </div>
-            <div class="bg-purple-100 p-4 rounded-lg text-center flex-1">
-              <i class="fas fa-star text-purple-600 text-2xl mb-2"></i>
-              <p class="font-bold text-gray-800">4.9/5</p>
-              <p class="text-sm text-gray-600">Rating</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Tech Stack Section -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Technologies I Work With</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Modern tools and frameworks for exceptional results</p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
-      </div>
-      
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8">
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">HTML5</span>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center my-20">
+                <h2 class="text-4xl font-bold text-white mb-4 ">Why Choose Us</h2>
+                <p class="text-xl text-gray-300">Experience the difference of working with experts</p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center group hover:bg-white/5 transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rocket text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Fast Performance</h3>
+                    <p class="text-gray-300">Lightning-fast loading speeds for optimal user experience</p>
+                </div>
+    
+                <!-- Feature 2 -->
+                <div class="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center group hover:bg-white/5 transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Secure & Reliable</h3>
+                    <p class="text-gray-300">Built with the latest security standards and best practices</p>
+                </div>
+    
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-pink-600/20 to-red-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center group hover:bg-white/5 transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500 to-red-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-comments text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+                    <p class="text-gray-300">Round-the-clock assistance for all your needs</p>
+                </div>
+    
+                <!-- Feature 4 -->
+                <div class="bg-gradient-to-br from-red-600/20 to-orange-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center group hover:bg-white/5 transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">SEO Optimized</h3>
+                    <p class="text-gray-300">Built to rank higher and attract more visitors</p>
+                </div>
+            </div>
         </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">CSS3</span>
-        </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="React" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">Bootstrap</span>
-        </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">JavaScript</span>
-        </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="Node.js" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">jQuery</span>
-        </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">PHP</span>
-        </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">MySQL</span>
-        </div>
-
-        <div class="tech-stack-item flex flex-col items-center">
-          <div class="bg-white p-4 rounded-full shadow-md mb-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" class="h-12 w-12">
-          </div>
-          <span class="text-sm text-gray-700">WordPress</span>
-        </div>
-        
-        
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">My Services</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive digital solutions tailored to your business needs</p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <i class="fas fa-code text-blue-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Custom Web Development</h3>
-          <p class="text-gray-600 mb-4">
-            Tailored website development using modern technologies to ensure fast performance, seamless UX, and long-term scalability.          
-          </p>
-          <ul class="space-y-2 text-gray-600">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Fully responsive across all devices
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Clean, SEO-friendly code structure
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Optimized for speed and performance
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Service 2 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
-          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-            <i class="fab fa-wordpress text-green-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">WordPress Development</h3>
-          <p class="text-gray-600 mb-4">
-            Custom WordPress solutions ranging from simple blogs to dynamic business sites and full-featured e-commerce platforms.
-          </p>
-          <ul class="space-y-2 text-gray-600">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Advanced theme customization
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Plugin configurations
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              WooCommerce and third-party integrations
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Service 3 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
-          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-            <i class="fas fa-search text-purple-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">SEO Optimization</h3>
-          <p class="text-gray-600 mb-4">
-            Result-driven SEO strategies to boost your site’s visibility, search rankings, and organic traffic.
-          </p>
-          <ul class="space-y-2 text-gray-600">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Keyword research and content planning
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              On-page SEO enhancements
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Strategic link building
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Service 4 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
-          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
-            <i class="fas fa-shopping-cart text-yellow-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">E-Commerce Solutions</h3>
-          <p class="text-gray-600 mb-4">
-            End-to-end development of secure, scalable online stores built to convert and grow.
-          </p>
-          <ul class="space-y-2 text-gray-600">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              WooCommerce setup
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Product management
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Conversion optimization
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Service 5 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
-          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
-            <i class="fas fa-mobile-alt text-red-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Mobile-First Design</h3>
-          <p class="text-gray-600 mb-4">
-            Websites designed with mobile users in mind first, ensuring flawless experience on all devices.
-          </p>
-          <ul class="space-y-2 text-gray-600">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Responsive frameworks
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Touch optimization
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Lightweight Fast loading
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Service 6 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
-          <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-            <i class="fas fa-chart-line text-indigo-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Performance Optimization</h3>
-          <p class="text-gray-600 mb-4">
-            Speed up your existing website with advanced optimization techniques and caching strategies.
-          </p>
-          <ul class="space-y-2 text-gray-600">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Page speed analysis
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              Resource optimization
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              CDN setup and caching integration
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Pricing Section -->
   <section class="py-20 bg-gray-50">
@@ -549,7 +441,7 @@ if (isset($_POST['submit'])) {
               <span>Custom Plugin Development</span>
             </li>
           </ul>
-          <a href="#contact" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">
+          <a href="contact.php" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">
             Get Started
           </a>
         </div>
@@ -586,7 +478,7 @@ if (isset($_POST['submit'])) {
               <span>Advanced Custom Development</span>
             </li>
           </ul>
-          <a href="#contact" class="block text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+          <a href="contact.php" class="block text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
             Get Started
           </a>
         </div>
@@ -623,14 +515,14 @@ if (isset($_POST['submit'])) {
               <span>Custom Plugin Development</span>
             </li>
           </ul>
-          <a href="#contact" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">
+          <a href="contact.php" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">
             Get Started
           </a>
         </div>
       </div>
       
       <div class="text-center mt-12">
-        <p class="text-gray-600">Need something custom? <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium">Contact me</a> for a personalized quote.</p>
+        <p class="text-gray-600">Need something custom? <a href="contact.php" class="text-blue-600 hover:text-blue-800 font-medium">Contact me</a> for a personalized quote.</p>
       </div>
     </div>
   </section>
@@ -641,7 +533,7 @@ if (isset($_POST['submit'])) {
     <div class="max-w-6xl mx-auto px-10 sm:px-6 lg:px-12">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-gray-800 mb-4">My Process</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">A structured approach to deliver exceptional results</p>
+            <p class="text-lg text-gray-700 font-medium max-w-2xl mx-auto">A structured approach to deliver exceptional results</p>
             <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
         </div>
         
@@ -649,7 +541,7 @@ if (isset($_POST['submit'])) {
             <div class="process-step mb-8">
                 <div class="process-number">1</div>
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Discovery & Planning</h3>
-                <p class="text-gray-600 text-center">
+                <p class="text-gray-700 font-medium text-center">
                     Every project begins with a deep dive into your business, goals, and audience. In this stage, I gather all the details, analyze your competitors, plan the content structure, and outline the technical roadmap. This helps set a strong foundation for a results-driven website.            
                 </p>
             </div>
@@ -657,7 +549,7 @@ if (isset($_POST['submit'])) {
             <div class="process-step mb-8">
                 <div class="process-number">2</div>
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Design & Prototyping</h3>
-                <p class="text-gray-600 text-center">
+                <p class="text-gray-700 font-medium text-center">
                     Next, I design wireframes and visual mockups to bring your ideas to life. We’ll collaborate closely during this phase to fine-tune the look, layout, and user experience until everything aligns perfectly with your vision.
                 </p>
             </div>
@@ -665,7 +557,7 @@ if (isset($_POST['submit'])) {
             <div class="process-step mb-8">
                 <div class="process-number">3</div>
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Development</h3>
-                <p class="text-gray-600 text-center">
+                <p class="text-gray-700 font-medium text-center">
                     Once the design is approved, I begin building your site using clean code, responsive design, and the latest web technologies. The site is tested across all major browsers and devices to ensure it’s fast, functional, and user-friendly.
                 </p>
             </div>
@@ -673,7 +565,7 @@ if (isset($_POST['submit'])) {
             <div class="process-step mb-8">
                 <div class="process-number">4</div>
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Launch & Optimization</h3>
-                <p class="text-gray-600 text-center">
+                <p class="text-gray-700 font-medium text-center">
                     After final checks and approval, your website goes live with complete SEO setup and tracking tools in place. I also handle speed optimization and performance tuning to make sure your site is ready to perform from day one — and beyond.
                 </p>
             </div>
@@ -685,7 +577,6 @@ if (isset($_POST['submit'])) {
 <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4">WHY CHOOSE US</span>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Crafting Digital Excellence You Can Trust</h2>
       <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
     </div>
@@ -754,8 +645,8 @@ if (isset($_POST['submit'])) {
     
     <!-- CTA -->
     <div class="text-center mt-16">
-      <a href="#contact" class="inline-flex items-center px-6 py-4 border border-transparent text-lg font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition duration-300">
-        Experience the Difference
+      <a href="https://wa.me/923402710523" class="inline-flex items-center px-6 py-4 border border-transparent text-lg font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-400 hover:to-blue-700 transition duration-300">
+        Lets Discuss
         <i class="fas fa-arrow-right ml-3 animate-pulse"></i>
       </a>
     </div>
@@ -765,38 +656,43 @@ if (isset($_POST['submit'])) {
   <!-- Projects Section -->
   <section id="projects" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 ">
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Featured Projects</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">A selection of my recent work showcasing diverse skills and solutions</p>
         <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
         <!-- Project 1 -->
-        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-          <div class="relative overflow-hidden h-60">
-            <img src="images/blogging-website-design.webp" alt="SEO Blog" class="w-full h-full object-cover transition duration-500 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-              <div>
-                <span class="text-sm text-blue-300 font-medium">WordPress Development</span>
-                <h3 class="text-xl font-bold text-white mt-1">SEO-Friendly Blog</h3>
+
+         <!-- <a href=" project.php#blog"> -->
+            <div class="bg-white rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
+                <div class="relative overflow-hidden h-60">
+                  <img src="images/blogging-website.webp" alt="SEO Blog" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                    <div>
+                      <span class="text-sm text-blue-300 font-medium">WordPress Development</span>
+                      <h3 class="text-xl font-bold text-white mt-1">SEO-Friendly Blog</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  Built a fast, mobile-optimized blog with full SEO setup that ranks on Google's first page for targeted keywords.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SEO</span>
+                  <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">WordPress</span>
+                  <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Performance</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              Built a fast, mobile-optimized blog with full SEO setup that ranks on Google's first page for targeted keywords.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SEO</span>
-              <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">WordPress</span>
-              <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Performance</span>
-            </div>
-          </div>
-        </div>
-        
+          <!-- </a> -->
+
         <!-- Project 2 -->
-        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+         <!-- <a href="project.php#business-website"> -->
+        <div class=" bg-white rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
           <div class="relative overflow-hidden h-60">
             <img src="images/business-website-design.webp" alt="Custom WP Theme" class="w-full h-full object-cover transition duration-500 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
@@ -817,9 +713,11 @@ if (isset($_POST['submit'])) {
             </div>
           </div>
         </div>
+        <!-- </a> -->
         
         <!-- Project 3 -->
-        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+         <!-- <a href="project.php#ecommerce-website"> -->
+          <div class=" bg-white rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
           <div class="relative overflow-hidden h-60">
             <img src="images/online-store-website.webp" alt="Ecommerce" class="w-full h-full object-cover transition duration-500 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
@@ -840,21 +738,24 @@ if (isset($_POST['submit'])) {
             </div>
           </div>
         </div>
+         <!-- </a> -->
+        
         
         <!-- Project 4 -->
-        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+         <a href="project.php#school-management">
+        <div class=" bg-white rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
           <div class="relative overflow-hidden h-60">
             <img src="images/service-providing-website.webp" alt="Web Application" class="w-full h-full object-cover transition duration-500 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <span class="text-sm text-blue-300 font-medium">Web Application</span>
-                <h3 class="text-xl font-bold text-white mt-1">Service Providing Website</h3>
+                <h3 class="text-xl font-bold text-white mt-1">School management Website</h3>
               </div>
             </div>
           </div>
           <div class="p-6">
             <p class="text-gray-600 mb-4">
-              Developed a custom service Providing website with real-time updates and team collaboration features.
+              Developed a custom school management website with real-time updates and data management features.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
@@ -863,56 +764,61 @@ if (isset($_POST['submit'])) {
             </div>
           </div>
         </div>
+        </a>
         
         <!-- Project 5 -->
-        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+         <a href="project.php#portfolio-website">
+        <div class=" bg-white rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
           <div class="relative overflow-hidden h-60">
             <img src="images/portfolio-website.webp" alt="Portfolio Website" class="w-full h-full object-cover transition duration-500 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <span class="text-sm text-blue-300 font-medium">Portfolio</span>
-                <h3 class="text-xl font-bold text-white mt-1">Artist Portfolio</h3>
+                <h3 class="text-xl font-bold text-white mt-1">Freelancer Portfolio</h3>
               </div>
             </div>
           </div>
           <div class="p-6">
             <p class="text-gray-600 mb-4">
-              Designed a visually stunning portfolio website for a digital artist with gallery and e-commerce functionality.
+              Designed a visually stunning portfolio website for a digital artist with gallery and cms system
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Design</span>
               <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Gallery</span>
-              <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">E-Commerce</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">WordPress</span>
             </div>
           </div>
         </div>
+        </a>
         
         <!-- Project 6 -->
-        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+         <a href="project.php#local-business-website">
+        <div class=" bg-white rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
           <div class="relative overflow-hidden h-60">
             <img src="images/corporate-website.webp" alt="Corporate Website" class="w-full h-full object-cover transition duration-500 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
-                <span class="text-sm text-blue-300 font-medium">Corporate</span>
-                <h3 class="text-xl font-bold text-white mt-1">Corporate Website</h3>
+                <span class="text-sm text-blue-300 font-medium">Local Business</span>
+                <h3 class="text-xl font-bold text-white mt-1">Local business Website</h3>
               </div>
             </div>
           </div>
           <div class="p-6">
             <p class="text-gray-600 mb-4">
-              Built a professional corporate website with multilingual support, news section, and contact management.
+              Built a professional business website with blog section, and contact management.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Corporate</span>
-              <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Multilingual</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Professional</span>
+              <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">dashboard</span>
               <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">CMS</span>
             </div>
           </div>
         </div>
       </div>
+      </a>
       
       <div class="text-center mt-12">
-        <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+        <a href="contact.php" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
           Start Your Project
           <i class="fas fa-arrow-right ml-2"></i>
         </a>
@@ -940,7 +846,7 @@ if (isset($_POST['submit'])) {
               <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
             </div>
             <div class="ml-4">
-              <h4 class="text-lg font-bold text-gray-800">Sarah Johnson</h4>
+              <h4 class="text-lg font-bold text-gray-800">Sarah</h4>
               <p class="text-gray-600">Marketing Director</p>
             </div>
           </div>
@@ -963,7 +869,7 @@ if (isset($_POST['submit'])) {
               <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
             </div>
             <div class="ml-4">
-              <h4 class="text-lg font-bold text-gray-800">Michael Chen</h4>
+              <h4 class="text-lg font-bold text-gray-800">Farhad Ali</h4>
               <p class="text-gray-600">E-Commerce Manager</p>
             </div>
           </div>
@@ -986,7 +892,7 @@ if (isset($_POST['submit'])) {
               <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
             </div>
             <div class="ml-4">
-              <h4 class="text-lg font-bold text-gray-800">Emma Rodriguez</h4>
+              <h4 class="text-lg font-bold text-gray-800">Sidra </h4>
               <p class="text-gray-600">Small Business Owner</p>
             </div>
           </div>
@@ -1007,8 +913,8 @@ if (isset($_POST['submit'])) {
 
   <!-- FAQ Section -->
   <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div class="text-center mb-16 ">
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">Answers to common questions about my services</p>
         <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
@@ -1091,10 +997,10 @@ if (isset($_POST['submit'])) {
         Let's discuss how I can help you achieve your business goals with a custom digital solution.
       </p>
       <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition duration-300 text-lg">
+        <a href="contact.php" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition duration-300 text-lg">
           Get Started Now
         </a>
-        <a href="tel:+923402710523" class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-4 rounded-lg font-medium transition duration-300 text-lg">
+        <a href="https://wa.me/923402710523" class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-4 rounded-lg font-medium transition duration-300 text-lg">
           <i class="fas fa-phone mr-2"></i> Call Me
         </a>
       </div>
@@ -1105,113 +1011,11 @@ if (isset($_POST['submit'])) {
   <section id="contact" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+        <a href="contact.php">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+        </a>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ready to start your project? Let's discuss how I can help you achieve your goals.</p>
         <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-4"></div>
-      </div>
-      
-      <div class="lg:flex lg:space-x-12">
-        <div class="lg:w-1/2 mb-12 lg:mb-0">
-          <form class="space-y-6" action="index.php" method="post">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-              <input type="text" id="name" name="name" aria-required="true" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Full name" required>
-            </div>
-            
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-              <input type="email" id="email" name="email" aria-required="true" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="john@example.com" required>
-            </div>
-            
-            <div>
-              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone number</label>
-              <input type="tel" id="phone" name="phone" aria-required="true" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone" required>
-            </div>
-            
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea id="message" name="message" rows="5" aria-required="true" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            
-            <button type="submit" name="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-              Send Message
-            </button>
-          </form>
-        </div>
-        
-        <div class="lg:w-1/2">
-          <div class="bg-gray-50 p-8 rounded-xl h-full">
-            <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
-            
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg">
-                  <i class="fas fa-envelope text-blue-600"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="text-sm font-medium text-gray-500">Email</h4>
-                  <a href="mailto:ahmeer034027@gmail.com" class="text-base text-gray-800 hover:text-blue-600">ahmeer034027@gmail.com</a>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 bg-green-100 p-3 rounded-lg">
-                  <i class="fab fa-whatsapp text-green-600"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="text-sm font-medium text-gray-500">WhatsApp</h4>
-                  <a href="#" target="_blank" class="text-base text-gray-800 hover:text-green-600">+92 340 2710523</a>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 bg-purple-100 p-3 rounded-lg">
-                  <i class="fas fa-map-marker-alt text-purple-600"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="text-sm font-medium text-gray-500">Location</h4>
-                  <p class="text-base text-gray-800"> Hazara Town, Quetta</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="mt-8">
-              <h4 class="text-lg font-bold text-gray-800 mb-4">Connect With Me</h4>
-              <div class="flex space-x-4">
-                <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition duration-300">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition duration-300">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white hover:bg-green-600 transition duration-300">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-900 transition duration-300">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-            
-            <div class="mt-8">
-              <h4 class="text-lg font-bold text-gray-800 mb-4">Business Hours</h4>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Monday - Friday</span>
-                  <span class="text-gray-800 font-medium">9:00 AM - 8:00 PM</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Saturday</span>
-                  <span class="text-gray-800 font-medium">Closed</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Sunday</span>
-                  <span class="text-gray-800 font-medium">Closed</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1228,5 +1032,3 @@ require('footer.php')
   <script src="home.js"></script>
   </body>
 </html>
-
-  
