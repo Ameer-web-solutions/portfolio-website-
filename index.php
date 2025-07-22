@@ -93,6 +93,67 @@
       font-size: 24px;
       font-weight: bold;
     }
+      .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .pricing-popular {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-popular::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--secondary);
+      color: white;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+        /* FAQ Item Hover */
+
+    .faq-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        
+    }
+    .faq-item {
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .faq-question {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-question:hover {
+      color: var(--primary);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .faq-answer.active {
+      max-height: 500px;
+    }
+/* FAQ Items Hover Effect */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
     .cta-section {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5');
       background-size: cover;
