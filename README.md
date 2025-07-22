@@ -1,4 +1,4 @@
-# 🌐 Ameer Web Solutions
+# Ameer Web Solutions
 
 Welcome to **Ameer Web Solutions** — a modern and mobile-friendly website built to showcase professional web development, SEO services, and digital solutions for small businesses.
 
@@ -10,15 +10,15 @@ Welcome to **Ameer Web Solutions** — a modern and mobile-friendly website buil
 
 This website is designed for a web developer's personal portfolio. It shows:
 
-- ✅ Who the developer is
-- 🛠️ What services are offered (like website design, SEO, optimization)
-- 📂 Sample projects
-- 📞 Easy contact options for clients
-- 📍 Business location and info
+-  Who the developer is
+-  What services are offered (like website design, SEO, optimization)
+-  Sample projects
+-  Easy contact options for clients
+-  Business location and info
 
 ---
 
-## 🧰 What This Website Uses
+##  What This Website Uses
 
 This website is **custom-built** using:
 
@@ -31,7 +31,7 @@ This website is **custom-built** using:
 
 ---
 
-## 📷 Website Features
+## Website Features
 
 - Clean and modern design
 - Mobile responsive (works great on phones)
@@ -56,7 +56,7 @@ If you want to use or change this website:
 
 ---
 
-## 🤝 Who Can Use This?
+##  Who Can Use This?
 
 This is perfect for:
 
@@ -67,7 +67,7 @@ This is perfect for:
 
 ---
 
-## 🙋‍♂️ Author
+##  Author
 
 **Developed by:** [Ameer Web Solutions](https://ameerwebsolutions.com)  
 📧 Email: contact@ameerwebsolutions.com
