@@ -70,7 +70,7 @@ This is perfect for:
 ##  Author
 
 **Developed by:** [Ameer Web Solutions](https://ameerwebsolutions.com)  
-📧 Email: contact@ameerwebsolutions.com
+📧 Email: admin@ameerwebsolutions.com
 
 ---
 
